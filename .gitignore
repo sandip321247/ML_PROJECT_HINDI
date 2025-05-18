@@ -132,6 +132,7 @@ celerybeat.pid
 .venv
 env/
 venv/
+venv_ml_project_hindi/
 ENV/
 env.bak/
 venv.bak/
