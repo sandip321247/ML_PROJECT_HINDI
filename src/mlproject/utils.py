@@ -11,7 +11,8 @@ import pymysql
 import pickle
 import numpy as np
 
-load_dotenv()
+load_dotenv()#iit reads the .env file
+#load the environment variables
 
 host=os.getenv("host")
 user=os.getenv("user")
@@ -28,7 +29,7 @@ def read_sql_data():
             password=password,
             db=db
         )
-        logging.info("Connection Established",mydb)
+        logging.info(f"Connection Established with database {mydb}")
         df=pd.read_sql_query('Select * from students',mydb)
         print(df.head())
 

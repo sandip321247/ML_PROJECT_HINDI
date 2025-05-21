@@ -24,7 +24,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         try:
             ##reading the data from mysql
-            df=read_sql_data()
+            df=read_sql_data() # it store the dataframe which is returned from read_sql_data function
             logging.info("Reading completed mysql database")
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
